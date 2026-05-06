@@ -31,4 +31,4 @@ jobs:
         run: mvn coveralls:report
 
       - name: Check the coverage with JaCoCo (+85%) ##check if the coverage is more than 85%  
-        run: jacoco:check
+        run: mvn jacoco:check
