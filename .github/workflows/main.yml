@@ -20,7 +20,7 @@ jobs:
         run: mvn compile
 
       - name: Test di unitá with JaCoCo ##do the unity tests and generates a report
-        run: mvn test jacoco:report
+        run: mvn test jacoco:report jacoco:check
 
       - name: Analisi statica e Package ## checkstyle for the static analysis
         run: mvn package -DskipTests
