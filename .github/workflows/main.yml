@@ -20,7 +20,7 @@ jobs:
         run: mvn compile
 
       - name: Test di unitá with JaCoCo ##do the unity tests and generates a report
-        run: mvn test jacoco:report jacoco:check
+        run: mvn test jacoco:report 
 
       - name: Analisi statica e Package ## checkstyle for the static analysis
         run: mvn package -DskipTests
@@ -29,3 +29,6 @@ jobs:
         env:
           COVERALLS_REPO_TOKEN: ${{secrets.COVERALLS_REPO_TOKEN}}
         run: mvn coveralls:report
+
+      - name: Check the coverage with JaCoCo (+85%) ##check if the coverage is more than 85%  
+        run: jacoco:check
