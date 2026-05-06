@@ -72,13 +72,13 @@
             </plugins>
         </pluginManagement>
         <plugins>
-            <!-- Plugin per eseguire i test durante la fase di compilazione -->
+            <!-- Plugin per fare i test unitari-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M6</version>
             </plugin>
-            <!-- Plugin per eseguire il checkstyle del codice-->
+            <!-- Plugin per fare il checkstyle-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
@@ -90,14 +90,14 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <phase>verify</phase>
+                        <phase>package</phase>
                         <goals>
                             <goal>checkstyle</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
-            <!-- Plugin per eseguire code coverage jacoco-->
+            <!-- Plugin per fare code coverage-->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
