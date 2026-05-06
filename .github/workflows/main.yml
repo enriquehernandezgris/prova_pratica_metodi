@@ -5,7 +5,9 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: ./roman-number
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 1.8  ##uses java 1.8
