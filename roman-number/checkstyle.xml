@@ -7,12 +7,24 @@
     <property name="encoding" value="UTF-8"/>
     <property name="severity" value="error"/>
 
+    <module name="FileLength"/>
+    <module name="LineLength"/>
+    <module name="FileTabCharacter"/>
+    <module name="Header">
+        <property name="fileExtension" value="txt"/>
+        <property name="headerFile" value="LICENCE"/>
+        <property name="header" value="////////////////////////////////////////////////////////////////////\n// Enrique Hernández Gris 2169844\n// Manuel Ibáñez Martínez-Lozano 2169871\n////////////////////////////////////////////////////////////////////"/>
+    </module>
     <module name="TreeWalker">
-        <!-- Reglas básicas de estilo -->
+        <module name="BooleanExpressionComplexity"/>
+        <module name="CyclomaticComplexity"/>
+        <module name="MethodLength">
+            <property name="max" value="100"/>
+            <property name="countEmpty" value="false"/>
+        </module>
+        <module name="EmptyCatchBlock"/>
         <module name="AvoidStarImport"/>
+        <module name="IllegalImport"/>
         <module name="NeedBraces"/>
-        <module name="WhitespaceAround"/>
-        <module name="LeftCurly"/>
-        <module name="RightCurly"/>
     </module>
 </module>
