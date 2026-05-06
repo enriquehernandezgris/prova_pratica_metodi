@@ -11,8 +11,7 @@
     <module name="LineLength"/>
     <module name="FileTabCharacter"/>
     <module name="Header">
-        <property name="fileExtension" value="txt"/>
-        <property name="headerFile" value="LICENCE"/>
+        <property name="fileExtension" value="java"/>
         <property name="header" value="////////////////////////////////////////////////////////////////////\n// Enrique Hernández Gris 2169844\n// Manuel Ibáñez Martínez-Lozano 2169871\n////////////////////////////////////////////////////////////////////"/>
     </module>
     <module name="TreeWalker">
