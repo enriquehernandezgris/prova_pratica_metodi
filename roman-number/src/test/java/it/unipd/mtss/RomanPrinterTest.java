@@ -11,27 +11,8 @@ import org.junit.jupiter.api.Test;
 public class RomanPrinterTest {
     @Test
     public void testPrint() {
-        assertEquals("""
-                 _____
-                |_   _|
-                  | |
-                  | |
-                 _| |_
-                |_____|""", RomanPrinter.print(1));
-        assertEquals("""
-                 _____   _____
-                |_   _| |_   _|
-                  | |     | |
-                  | |     | |
-                 _| |_   _| |_
-                |_____| |_____|""", RomanPrinter.print(2));
-        assertEquals("""
-                 _____   _____   _____
-                |_   _| |_   _| |_   _|
-                  | |     | |     | |
-                  | |     | |     | |
-                 _| |_   _| |_   _| |_
-                |_____| |_____| |_____|""", RomanPrinter.print(3));
+        assertEquals(" _____ \n|_   _|\n  | |  \n  | |  \n _| |_ \n|_____|", RomanPrinter.print(1));
+        assertEquals(" _____     _____ \n|_   _|   |_   _|\n  | |       | |  \n  | |       | |  \n _| |_     _| |_ \n|_____|   |_____|", RomanPrinter.print(2));
+        assertEquals(" _____     _____     _____ \n|_   _|   |_   _|   |_   _|\n  | |       | |       | |  \n  | |       | |       | |  \n _| |_     _| |_     _| |_ \n|_____|   |_____|   |_____|", RomanPrinter.print(3));
     }
 }
-

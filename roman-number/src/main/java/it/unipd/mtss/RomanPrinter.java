@@ -77,23 +77,30 @@ public class RomanPrinter {
     }
 
     private static String printAsciiArt(String romanNumber) {
-        if (romanNumber.isEmpty()) {
-            return null;
+        if (romanNumber == null || romanNumber.isEmpty()) {
+            return "";
         }
 
         StringBuilder AsciiArt = new StringBuilder();
+        char[] chars = romanNumber.toCharArray();
 
         for (int i = 0; i < 6; i++) {
-            for (char c : romanNumber.toCharArray()) {
-                String[] letter = AsciiDict.get(c);
+            for (int j = 0; j < chars.length; j++) {
+                String[] letter = AsciiDict.get(chars[j]);
 
                 if (letter != null) {
                     AsciiArt.append(letter[i]);
-                    AsciiArt.append("   ");
+                    
+                    if (j < chars.length - 1) {
+                        AsciiArt.append("   ");
+                    }
                 }
             }
-            AsciiArt.append("\n");
+            
+            if (i < 5) {
+                AsciiArt.append("\n");
+            }
         }
-        return AsciiArt.toString().trim();
+        return AsciiArt.toString();
     }
-}
+    }
