@@ -12,17 +12,22 @@ import org.junit.jupiter.api.Test;
 public class IntegerToRomanTest {
 
     @Test
-    public void convert_NumbersFourToCorrectRomanSymbols() {
-        assertEquals("IV", IntegerToRoman.convert(4), "Fail converting 4");
+    public void convert_NumbersSevenToCorrectRomanSymbols() {
+        assertEquals("VII", IntegerToRoman.convert(7), "Fail converting 7");
     }
 
     @Test
-    public void convert_NumbersFiveToCorrectRomanSymbols() {
-        assertEquals("V", IntegerToRoman.convert(5), "Fail converting 5");
+    public void convert_NumbersEightToCorrectRomanSymbols() {
+        assertEquals("VIII", IntegerToRoman.convert(8), "Fail converting 8");
     }
 
     @Test
-    public void convert_NumbersSixToCorrectRomanSymbols() {
-        assertEquals("VI", IntegerToRoman.convert(6), "Fail converting 6");
+    public void convert_NumbersNineToCorrectRomanSymbols() {
+        assertEquals("IX", IntegerToRoman.convert(9), "Fail converting 9");
+    }
+
+    @Test
+    public void convert_NumbersTenToCorrectRomanSymbols() {
+        assertEquals("X", IntegerToRoman.convert(9), "Fail converting 10");
     }
 }
