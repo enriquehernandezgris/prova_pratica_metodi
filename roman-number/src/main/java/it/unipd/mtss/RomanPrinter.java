@@ -77,10 +77,6 @@ public class RomanPrinter {
     }
 
     private static String printAsciiArt(String romanNumber) {
-        if (romanNumber == null || romanNumber.isEmpty()) {
-            return "";
-        }
-
         StringBuilder AsciiArt = new StringBuilder();
         char[] chars = romanNumber.toCharArray();
 
