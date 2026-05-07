@@ -94,6 +94,6 @@ public class RomanPrinter {
             }
             AsciiArt.append("\n");
         }
-        return AsciiArt.toString();
+        return AsciiArt.toString().trim();
     }
 }
