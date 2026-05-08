@@ -6,7 +6,6 @@
 package it.unipd.mtss;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
 
 public class IntegerToRomanTest {
@@ -28,6 +27,6 @@ public class IntegerToRomanTest {
 
     @Test
     public void convert_NumbersTenToCorrectRomanSymbols() {
-        assertEquals("X", IntegerToRoman.convert(9), "Fail converting 10");
+        assertEquals("X", IntegerToRoman.convert(10), "Fail converting 10");
     }
 }
