@@ -132,4 +132,29 @@ public class RomanPrinterTest {
     public void print_NumberFiveHundred_ReturnsAsciiArtI() {
         assertEquals(" _____  \n|  __ \\ \n| |  | |\n| |  | |\n| |__| |\n|_____/ ", RomanPrinter.print(500));
     } 
+
+    @Test
+    public void print_NumberSixHundred_ReturnsAsciiArtI() {
+        assertEquals(" _____       _____ \n|  __ \\     / ____|\n| |  | |   | |     \n| |  | |   | |     \n| |__| |   | |____ \n|_____/     \\_____|", RomanPrinter.print(600));
+    } 
+
+    @Test
+    public void print_NumberSevenHundred_ReturnsAsciiArtI() {
+        assertEquals(" _____       _____      _____ \n|  __ \\     / ____|    / ____|\n| |  | |   | |        | |     \n| |  | |   | |        | |     \n| |__| |   | |____    | |____ \n|_____/     \\_____|    \\_____|", RomanPrinter.print(700));
+    } 
+
+    @Test
+    public void print_NumberEightHundred_ReturnsAsciiArtI() {
+        assertEquals(" _____       _____      _____      _____ \n|  __ \\     / ____|    / ____|    / ____|\n| |  | |   | |        | |        | |     \n| |  | |   | |        | |        | |     \n| |__| |   | |____    | |____    | |____ \n|_____/     \\_____|    \\_____|    \\_____|", RomanPrinter.print(800));
+    } 
+
+    @Test
+    public void print_NumberNineHundred_ReturnsAsciiArtI() {
+        assertEquals("  _____     __  __ \n / ____|   |  \\/  |\n| |        | \\  / |\n| |        | |\\/| |\n| |____    | |  | |\n \\_____|   |_|  |_|", RomanPrinter.print(900));
+    } 
+
+    @Test
+    public void print_NumberThousand_ReturnsAsciiArtI() {
+        assertEquals(" __  __ \n|  \\/  |\n| \\  / |\n| |\\/| |\n| |  | |\n|_|  |_|", RomanPrinter.print(1000));
+    } 
 }

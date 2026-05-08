@@ -166,4 +166,29 @@ public class IntegerToRomanTest {
     public void convert_NumbersFiveHundredToCorrectRomanSymbols() {
         assertEquals("D", IntegerToRoman.convert(500), "Fail converting 500");
     }   
+
+    @Test
+    public void convert_NumbersSixHundredToCorrectRomanSymbols() {
+        assertEquals("DC", IntegerToRoman.convert(600), "Fail converting 600");
+    }  
+
+    @Test
+    public void convert_NumbersSevenHundredToCorrectRomanSymbols() {
+        assertEquals("DCC", IntegerToRoman.convert(700), "Fail converting 700");
+    }  
+
+    @Test
+    public void convert_NumbersEightHundredToCorrectRomanSymbols() {
+        assertEquals("DCCC", IntegerToRoman.convert(800), "Fail converting 800");
+    }  
+
+    @Test
+    public void convert_NumbersNineHundredToCorrectRomanSymbols() {
+        assertEquals("CM", IntegerToRoman.convert(900), "Fail converting 900");
+    }  
+
+    @Test
+    public void convert_NumbersThousandToCorrectRomanSymbols() {
+        assertEquals("M", IntegerToRoman.convert(1000), "Fail converting 1000");
+    }  
 }
