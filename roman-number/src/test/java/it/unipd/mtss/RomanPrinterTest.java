@@ -6,59 +6,36 @@
 package it.unipd.mtss;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
 import org.junit.jupiter.api.Test;
 
 public class RomanPrinterTest {
-
-    // Errore limite inferiore
-    @Test
-    public void convert_NumberZero_ThrowsIllegalArgumentException() {
-        int input = 0;
-
-        assertThrows(IllegalArgumentException.class, () -> {
-            IntegerToRoman.convert(input);
-        }, "Fail inferior limit");
-    }
-
-    // Errore limite negativo
-    @Test
-    public void convert_NegativeNumber_ThrowsIllegalArgumentException() {
-        int input = -5;
-
-        assertThrows(IllegalArgumentException.class, () -> {
-            IntegerToRoman.convert(input);
-        }, "Fail negative limit");
-    }
-
     // Tests
     @Test
     public void print_NumberOne_ReturnsAsciiArtI() {
         assertEquals(" _____ \n|_   _|\n  | |  \n  | |  \n _| |_ \n|_____|", RomanPrinter.print(1));
     }
 
-     @Test
+    @Test
     public void print_NumberTwo_ReturnsAsciiArtI() {
         assertEquals(" _____     _____ \n|_   _|   |_   _|\n  | |       | |  \n  | |       | |  \n _| |_     _| |_ \n|_____|   |_____|", RomanPrinter.print(2));
     }
 
-     @Test
+    @Test
     public void print_NumberThree_ReturnsAsciiArtI() {
         assertEquals(" _____     _____     _____ \n|_   _|   |_   _|   |_   _|\n  | |       | |       | |  \n  | |       | |       | |  \n _| |_     _| |_     _| |_ \n|_____|   |_____|   |_____|", RomanPrinter.print(3));
     }
 
-     @Test
+    @Test
     public void print_NumberFour_ReturnsAsciiArtI() {
-         assertEquals(" _____    __      __\n|_   _|   \\ \\    / /\n  | |      \\ \\  / / \n  | |       \\ \\/ /  \n _| |_       \\  /   \n|_____|       \\/    ", RomanPrinter.print(4));
+        assertEquals(" _____    __      __\n|_   _|   \\ \\    / /\n  | |      \\ \\  / / \n  | |       \\ \\/ /  \n _| |_       \\  /   \n|_____|       \\/    ", RomanPrinter.print(4));
     }
 
-     @Test
+    @Test
     public void print_NumberFive_ReturnsAsciiArtI() {
         assertEquals("__      __\n\\ \\    / /\n \\ \\  / / \n  \\ \\/ /  \n   \\  /   \n    \\/    ", RomanPrinter.print(5));
     }
 
-     @Test
+    @Test
     public void print_NumberSix_ReturnsAsciiArtI() {
         assertEquals("__      __    _____ \n\\ \\    / /   |_   _|\n \\ \\  / /      | |  \n  \\ \\/ /       | |  \n   \\  /       _| |_ \n    \\/       |_____|", RomanPrinter.print(6));    }
     
@@ -111,4 +88,48 @@ public class RomanPrinterTest {
     public void print_NumberFifty_ReturnsAsciiArtI() {
         assertEquals(" _      \n| |     \n| |     \n| |     \n| |____ \n|______|", RomanPrinter.print(50));
     }
+    @Test
+    public void print_NumberSixty_ReturnsAsciiArtI() {
+        assertEquals(" _          __  __ \n| |         \\ \\/ / \n| |          \\  /  \n| |          /  \\  \n| |____     / /\\ \\ \n|______|   /_/  \\_\\", RomanPrinter.print(60));
+    }
+
+    @Test
+    public void print_NumberSeventy_ReturnsAsciiArtI() {
+        assertEquals(" _          __  __     __  __ \n| |         \\ \\/ /     \\ \\/ / \n| |          \\  /       \\  /  \n| |          /  \\       /  \\  \n| |____     / /\\ \\     / /\\ \\ \n|______|   /_/  \\_\\   /_/  \\_\\", RomanPrinter.print(70));
+    }
+
+    @Test
+    public void print_NumberEighty_ReturnsAsciiArtI() {
+        assertEquals(" _          __  __     __  __     __  __ \n| |         \\ \\/ /     \\ \\/ /     \\ \\/ / \n| |          \\  /       \\  /       \\  /  \n| |          /  \\       /  \\       /  \\  \n| |____     / /\\ \\     / /\\ \\     / /\\ \\ \n|______|   /_/  \\_\\   /_/  \\_\\   /_/  \\_\\", RomanPrinter.print(80));
+    }
+
+    @Test
+    public void print_NumberNinety_ReturnsAsciiArtI() {
+        assertEquals(" __  __      _____ \n \\ \\/ /     / ____|\n  \\  /     | |     \n  /  \\     | |     \n / /\\ \\    | |____ \n/_/  \\_\\    \\_____|", RomanPrinter.print(90));
+    }
+
+    @Test
+    public void print_NumberOneHundred_ReturnsAsciiArtI() {
+        assertEquals("  _____ \n / ____|\n| |     \n| |     \n| |____ \n \\_____|", RomanPrinter.print(100));
+    }
+
+    @Test
+    public void print_NumberTwoHundred_ReturnsAsciiArtI() {
+        assertEquals("  _____      _____ \n / ____|    / ____|\n| |        | |     \n| |        | |     \n| |____    | |____ \n \\_____|    \\_____|", RomanPrinter.print(200));
+    }
+
+    @Test
+    public void print_NumberThreeHundred_ReturnsAsciiArtI() {
+        assertEquals("  _____      _____      _____ \n / ____|    / ____|    / ____|\n| |        | |        | |     \n| |        | |        | |     \n| |____    | |____    | |____ \n \\_____|    \\_____|    \\_____|", RomanPrinter.print(300));
+    }
+    
+    @Test
+    public void print_NumberFourHundred_ReturnsAsciiArtI() {
+        assertEquals("  _____     _____  \n / ____|   |  __ \\ \n| |        | |  | |\n| |        | |  | |\n| |____    | |__| |\n \\_____|   |_____/ ", RomanPrinter.print(400));
+    }
+    
+    @Test
+    public void print_NumberFiveHundred_ReturnsAsciiArtI() {
+        assertEquals(" _____  \n|  __ \\ \n| |  | |\n| |  | |\n| |__| |\n|_____/ ", RomanPrinter.print(500));
+    } 
 }

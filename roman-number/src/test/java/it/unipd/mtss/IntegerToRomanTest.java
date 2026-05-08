@@ -6,11 +6,42 @@
 package it.unipd.mtss;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
 public class IntegerToRomanTest {
+     // Errore limite inferiore
+    @Test
+    public void convert_NumberZero_ThrowsIllegalArgumentException() {
+        int input = 0;
 
+        assertThrows(IllegalArgumentException.class, () -> {
+            IntegerToRoman.convert(input);
+        }, "Fail inferior limit");
+    }
+
+    // Errore limite negativo
+    @Test
+    public void convert_NegativeNumber_ThrowsIllegalArgumentException() {
+        int input = -5;
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            IntegerToRoman.convert(input);
+        }, "Fail negative limit");
+    }
+
+    // Errore limite superiore
+    @Test
+    public void convert_Thousandandone_ThrowsIllegalArgumentException() {
+        int input = 1001;
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            IntegerToRoman.convert(input);
+        }, "Fail superior limit");
+    }
+
+
+    //Tests
     @Test
     public void convert_NumbersOneToCorrectRomanSymbols() {
         assertEquals("I", IntegerToRoman.convert(1), "Fail converting 1");
@@ -90,4 +121,49 @@ public class IntegerToRomanTest {
     public void convert_NumbersFiftyToCorrectRomanSymbols() {
         assertEquals("L", IntegerToRoman.convert(50), "Fail converting 50");
     }
+
+    @Test
+    public void convert_NumbersSixtyToCorrectRomanSymbols() {
+        assertEquals("LX", IntegerToRoman.convert(60), "Fail converting 60");
+    }
+
+    @Test
+    public void convert_NumbersSeventyToCorrectRomanSymbols() {
+        assertEquals("LXX", IntegerToRoman.convert(70), "Fail converting 70");
+    }
+
+    @Test
+    public void convert_NumbersEightyToCorrectRomanSymbols() {
+        assertEquals("LXXX", IntegerToRoman.convert(80), "Fail converting 80");
+    }
+
+    @Test
+    public void convert_NumbersNinetyToCorrectRomanSymbols() {
+        assertEquals("XC", IntegerToRoman.convert(90), "Fail converting 90");
+    }
+
+    @Test
+    public void convert_NumbersOneHundredToCorrectRomanSymbols() {
+        assertEquals("C", IntegerToRoman.convert(100), "Fail converting 100");
+    }
+
+    @Test
+    public void convert_NumbersTwoHundredToCorrectRomanSymbols() {
+        assertEquals("CC", IntegerToRoman.convert(200), "Fail converting 200");
+    }
+
+    @Test
+    public void convert_NumbersThreeHundredToCorrectRomanSymbols() {
+        assertEquals("CCC", IntegerToRoman.convert(300), "Fail converting 300");
+    }
+
+    @Test
+    public void convert_NumbersFourHundredToCorrectRomanSymbols() {
+        assertEquals("CD", IntegerToRoman.convert(400), "Fail converting 400");
+    }
+
+    @Test
+    public void convert_NumbersFiveHundredToCorrectRomanSymbols() {
+        assertEquals("D", IntegerToRoman.convert(500), "Fail converting 500");
+    }   
 }
