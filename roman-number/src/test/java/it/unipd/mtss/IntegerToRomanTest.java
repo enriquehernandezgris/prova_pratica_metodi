@@ -6,9 +6,11 @@
 package it.unipd.mtss;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 
 public class IntegerToRomanTest {
+
     @Test
     public void convert_NumbersOneToCorrectRomanSymbols() {
         assertEquals("I", IntegerToRoman.convert(1), "Fail converting 1");
@@ -58,11 +60,34 @@ public class IntegerToRomanTest {
     public void convert_NumbersTenToCorrectRomanSymbols() {
         assertEquals("X", IntegerToRoman.convert(10), "Fail converting 10");
     }
+
+    @Test
+    public void convert_NumbersFifteenToCorrectRomanSymbols() {
+        assertEquals("XV", IntegerToRoman.convert(15), "Fail converting 15");
+    }
+
+    @Test
+    public void convert_NumbersNineteenToCorrectRomanSymbols() {
+        assertEquals("XIX", IntegerToRoman.convert(19), "Fail converting 19");
+    }
+
+    @Test
+    public void convert_NumbersTwentyToCorrectRomanSymbols() {
+        assertEquals("XX", IntegerToRoman.convert(20), "Fail converting 20");
+    }
+
+    @Test
+    public void convert_NumbersThirtyToCorrectRomanSymbols() {
+        assertEquals("XXX", IntegerToRoman.convert(30), "Fail converting 30");
+    }
+
+    @Test
+    public void convert_NumbersFortyToCorrectRomanSymbols() {
+        assertEquals("XL", IntegerToRoman.convert(40), "Fail converting 40");
+    }
+
+    @Test
+    public void convert_NumbersFiftyToCorrectRomanSymbols() {
+        assertEquals("L", IntegerToRoman.convert(50), "Fail converting 50");
+    }
 }
-
-
-
-
-
-
-
