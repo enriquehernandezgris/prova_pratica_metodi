@@ -14,60 +14,60 @@ public class RomanPrinter {
 
     static {
         AsciiDict.put('I', new String[]{
-            " _____ ",
-            "|_   _|",
-            "  | |  ",
-            "  | |  ",
-            " _| |_ ",
-            "|_____|"
+                " _____ ",
+                "|_   _|",
+                "  | |  ",
+                "  | |  ",
+                " _| |_ ",
+                "|_____|"
         });
         AsciiDict.put('V', new String[]{
-            "__      __",
-            "\\ \\    / /",
-            " \\ \\  / / ",
-            "  \\ \\/ /  ",
-            "   \\  /   ",
-            "    \\/    "
+                "__      __",
+                "\\ \\    / /",
+                " \\ \\  / / ",
+                "  \\ \\/ /  ",
+                "   \\  /   ",
+                "    \\/    "
         });
         AsciiDict.put('X', new String[]{
-            " __  __ ",
-            " \\ \\/ / ",
-            "  \\  /  ",
-            "  /  \\  ",
-            " / /\\ \\ ",
-            "/_/  \\_\\"
+                " __  __ ",
+                " \\ \\/ / ",
+                "  \\  /  ",
+                "  /  \\  ",
+                " / /\\ \\ ",
+                "/_/  \\_\\"
         });
         AsciiDict.put('L', new String[]{
-            " _      ",
-            "| |     ",
-            "| |     ",
-            "| |     ",
-            "| |____ ",
-            "|______|"
+                " _      ",
+                "| |     ",
+                "| |     ",
+                "| |     ",
+                "| |____ ",
+                "|______|"
         });
         AsciiDict.put('C', new String[]{
-            "  _____ ",
-            " / ____|",
-            "| |     ",
-            "| |     ",
-            "| |____ ",
-            " \\_____|"
+                "  _____ ",
+                " / ____|",
+                "| |     ",
+                "| |     ",
+                "| |____ ",
+                " \\_____|"
         });
         AsciiDict.put('D', new String[]{
-            " _____  ",
-            "|  __ \\ ",
-            "| |  | |",
-            "| |  | |",
-            "| |__| |",
-            "|_____/ "
+                " _____  ",
+                "|  __ \\ ",
+                "| |  | |",
+                "| |  | |",
+                "| |__| |",
+                "|_____/ "
         });
         AsciiDict.put('M', new String[]{
-            " __  __ ",
-            "|  \\/  |",
-            "| \\  / |",
-            "| |\\/| |",
-            "| |  | |",
-            "|_|  |_|"
+                " __  __ ",
+                "|  \\/  |",
+                "| \\  / |",
+                "| |\\/| |",
+                "| |  | |",
+                "|_|  |_|"
         });
 
     }
@@ -77,23 +77,26 @@ public class RomanPrinter {
     }
 
     private static String printAsciiArt(String romanNumber) {
-        if (romanNumber.isEmpty()) {
-            return null;
-        }
-
         StringBuilder AsciiArt = new StringBuilder();
+        char[] chars = romanNumber.toCharArray();
 
         for (int i = 0; i < 6; i++) {
-            for (char c : romanNumber.toCharArray()) {
-                String[] letter = AsciiDict.get(c);
+            for (int j = 0; j < chars.length; j++) {
+                String[] letter = AsciiDict.get(chars[j]);
 
                 if (letter != null) {
                     AsciiArt.append(letter[i]);
-                    AsciiArt.append("   ");
+                    
+                    if (j < chars.length - 1) {
+                        AsciiArt.append("   ");
+                    }
                 }
             }
-            AsciiArt.append("\n");
+            
+            if (i < 5) {
+                AsciiArt.append("\n");
+            }
         }
         return AsciiArt.toString();
     }
-}
+    }

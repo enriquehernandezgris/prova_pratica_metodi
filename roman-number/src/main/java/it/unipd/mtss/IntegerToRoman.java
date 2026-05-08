@@ -9,8 +9,7 @@ public class IntegerToRoman {
 
     public static String convert(int number) {
         if (number < 1 || number > 1000) {
-            System.out.println("Il numero deve essere compreso tra 1 e 1000");
-            return null;
+            throw new IllegalArgumentException("Il numero deve essere compreso tra 1 e 1000");
         } else {
             String[] letters = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X"
                     , "IX", "V", "IV", "I"};
