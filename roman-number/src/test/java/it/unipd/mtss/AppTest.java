@@ -5,9 +5,15 @@
 
 package it.unipd.mtss;
 
-public class App {
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
 
-    public static void main(String[] args) {
-        System.out.println(RomanPrinter.print(3));
+
+public class AppTest {
+
+   
+    @Test
+    public void shouldAnswerWithTrue() {
+        assertTrue(true);
     }
 }
