@@ -9,6 +9,35 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class IntegerToRomanTest {
+    @Test
+    public void convert_NumbersOneToCorrectRomanSymbols() {
+        assertEquals("I", IntegerToRoman.convert(1), "Fail converting 1");
+    }
+
+    @Test
+    public void convert_NumbersTwoToCorrectRomanSymbols() {
+        assertEquals("II", IntegerToRoman.convert(2), "Fail converting 2");
+    }
+
+    @Test
+    public void convert_NumbersThreeToCorrectRomanSymbols() {
+        assertEquals("III", IntegerToRoman.convert(3), "Fail converting 3");
+    }
+
+    @Test
+    public void convert_NumbersFourToCorrectRomanSymbols() {
+        assertEquals("IV", IntegerToRoman.convert(4), "Fail converting 4");
+    }
+
+    @Test
+    public void convert_NumbersFiveToCorrectRomanSymbols() {
+        assertEquals("V", IntegerToRoman.convert(5), "Fail converting 5");
+    }
+
+    @Test
+    public void convert_NumbersSixToCorrectRomanSymbols() {
+        assertEquals("VI", IntegerToRoman.convert(6), "Fail converting 6");
+    }
 
     @Test
     public void convert_NumbersSevenToCorrectRomanSymbols() {
@@ -30,3 +59,10 @@ public class IntegerToRomanTest {
         assertEquals("X", IntegerToRoman.convert(10), "Fail converting 10");
     }
 }
+
+
+
+
+
+
+
